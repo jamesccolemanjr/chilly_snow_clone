@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.010389208, g: 0.0037990736, b: 0.000729055, a: 1}
+  m_IndirectSpecularColor: {r: 0.11736322, g: 0.099627115, b: 0.082058184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -235,6 +235,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 10
+  explosion: {fileID: 3228504778454351015, guid: 24eb1f8d254b1459ea9abe2851123ae8,
+    type: 3}
   scoreText: {fileID: 1329346682}
 --- !u!96 &16499732
 TrailRenderer:
@@ -254,7 +256,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -304,8 +306,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.09019609, g: 0.8980392, b: 0.60986584, a: 1}
+      key1: {r: 0.09019609, g: 0.8980392, b: 0.60986584, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -328,7 +330,7 @@ TrailRenderer:
       atime5: 0
       atime6: 0
       atime7: 0
-      m_Mode: 0
+      m_Mode: 1
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
@@ -402,13 +404,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244347156}
-  m_LocalRotation: {x: -0.13647254, y: 0.31464753, z: 0.16867335, w: 0.92407876}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.036769953, y: 0.2947843, z: 0.20138603, w: 0.9333777}
+  m_LocalPosition: {x: 0, y: 0, z: -12.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -21, y: 35, z: 14}
+  m_LocalEulerAnglesHint: {x: -10.799001, y: 33.034, z: 21.140001}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,7 +448,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 0}
+  m_BackGroundColor: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -663,7 +665,7 @@ GameObject:
   - component: {fileID: 1820572831}
   - component: {fileID: 1820572830}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -821,5 +823,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 16499725}
+    - target: {fileID: 4755756150176967505, guid: e2c73a64f87714162b8d06352278a859,
+        type: 3}
+      propertyPath: amountOfObstacles
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2c73a64f87714162b8d06352278a859, type: 3}

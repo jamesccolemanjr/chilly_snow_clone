@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     private float score;
     public float movementSpeed;
+    public GameObject explosion;
 
 
     private bool movingLeft;
@@ -65,6 +66,13 @@ public class Player : MonoBehaviour
     void Die()
     {
         print("player dead");
+
+        Vector3 explosionLocation;
+        explosionLocation = this.gameObject.transform.position;
+        explosionLocation.z = explosionLocation.z - 3;
+
+        Instantiate(explosion, explosionLocation, this.gameObject.transform.rotation );
+
         Destroy(this.gameObject);
     }
 }
